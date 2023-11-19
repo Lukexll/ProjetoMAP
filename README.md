@@ -1,2 +1,2 @@
-# ProjetoMAp Aluguel em Patos
+# Projeto de MAP: Aluguel em Patos
 # Felipe, Nilton, Carol e Guilherme 
