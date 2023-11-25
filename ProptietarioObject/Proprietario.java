@@ -47,6 +47,9 @@ public class Proprietario {
     public void confirmarAgendamento(){
         
     }
+    public void executarComando(Comando comando) {
+        comando.executar();
+    }
 
     
 
