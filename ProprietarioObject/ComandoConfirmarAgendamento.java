@@ -1,4 +1,4 @@
-package ProptietarioObject;
+package ProprietarioObject;
 
 public class ComandoConfirmarAgendamento implements Comando{
     private Proprietario proprietario;
