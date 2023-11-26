@@ -1,4 +1,4 @@
-package agendamento0bject;
+package AgendamentoObject;
 import GeradorCodigo;
 
 class GeradorCodigoUnico implements GeradorCodigo {

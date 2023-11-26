@@ -1,4 +1,4 @@
-package agendamento0bject;
+package AgendamentoObject;
 
 import java.util.Queue;
 import java.util.LinkedList;

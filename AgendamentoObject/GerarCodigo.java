@@ -1,4 +1,4 @@
-package agendamento0bject;
+package AgendamentoObject;
 
 interface GeradorCodigo {
     int gerarCodigo();
