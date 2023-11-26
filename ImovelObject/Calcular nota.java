@@ -1,21 +1,18 @@
-import java.util.ArrayList;
 import java.util.List;
 
-interface Notificavel {
-    void atualizar();
+interface Observador {
+    void notificar();
 }
 
-class Imovel implements Notificavel {
+class Imovel implements Observador {
     private int codigo;
     private List<Integer> avaliacoes;
     private float notaMedia;
 
     private static Imovel instanciaUnica = null;
-    private List<Notificavel> observadores;
+    private List<Observador> observadores;
 
     private Imovel() {
-        avaliacoes = new ArrayList<>();
-        observadores = new ArrayList<>();
     }
 
     public static Imovel getInstancia() {
@@ -26,15 +23,9 @@ class Imovel implements Notificavel {
     }
 
     public void adicionarAvaliacao(int nota) {
-        avaliacoes.add(nota);
-        notificarObservadores();
     }
 
     private void notificarObservadores() {
-        calcularNotaMedia();
-        for (Notificavel observador : observadores) {
-            observador.atualizar();
-        }
     }
 
     public float getNotaMedia() {
@@ -42,37 +33,15 @@ class Imovel implements Notificavel {
     }
 
     private void calcularNotaMedia() {
-        int total = 0;
-        for (int nota : avaliacoes) {
-            total += nota;
-        }
-
-        if (avaliacoes.size() > 0) {
-            notaMedia = (float) total / avaliacoes.size();
-        } else {
-            notaMedia = 0;
-        }
     }
 
-    public void registrarObservador(Notificavel observador) {
-        observadores.add(observador);
+    public void registrarObservador(Observador observador) {
     }
 
     @Override
-    public void atualizar() {
-        calcularNotaMedia();
+    public void notificar() {
     }
 
     public static void main(String[] args) {
-        Imovel imovel = Imovel.getInstancia();
-
-        imovel.registrarObservador(imovel);
-
-        imovel.adicionarAvaliacao(4);
-        imovel.adicionarAvaliacao(5);
-        imovel.adicionarAvaliacao(3);
-
-        float notaMedia = imovel.getNotaMedia();
-        System.out.println("A nota média do imóvel é: " + notaMedia);
     }
 }
