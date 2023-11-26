@@ -1,5 +1,6 @@
-package agendamento0bject;
-import ProptietarioObject;
+package AgendamentoObject;
+
+import ComandoConfirmarAgendamento;
 
 public class ChecarconfirmacaoAgendamento implements Comando {
     private Proprietario proprietario;
