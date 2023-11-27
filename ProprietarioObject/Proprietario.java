@@ -1,4 +1,4 @@
-package ProptietarioObject;
+package ProprietarioObject;
 
 public class Proprietario {
     private int cpf;

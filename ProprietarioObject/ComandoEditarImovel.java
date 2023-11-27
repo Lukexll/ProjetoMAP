@@ -1,4 +1,4 @@
-package ProptietarioObject;
+package ProprietarioObject;
 
 public class ComandoEditarImovel implements Comando{
     private Proprietario proprietario;
