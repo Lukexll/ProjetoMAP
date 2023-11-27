@@ -1,5 +1,8 @@
 package AgendamentoObject;
-import GeradorCodigo;
+
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Random;
 
 class GeradorCodigoUnico implements GeradorCodigo {
     private Queue<Integer> codigosGerados = new LinkedList<>();

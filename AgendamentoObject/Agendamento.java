@@ -1,16 +1,15 @@
 package AgendamentoObject;
 
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.Random;
-
 public class Agendamento {
     private int codigo;
     private String data;
     private String horario;
 
-    public Agendamento(int codigo, String data, String horario) {
-        setCodigo(codigo);
+    private GeradorCodigo geradorCodigo;
+
+    public Agendamento(GeradorCodigo geradorCodigo, String data, String horario) {
+        this.geradorCodigo = geradorCodigo;
+        setCodigo(geradorCodigo.gerarCodigo());
         setData(data);
         setHorario(horario);
     }
