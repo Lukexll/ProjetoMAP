@@ -1,7 +1,8 @@
 package AgendamentoObject;
+
 import ProprietarioObjct.*;
 
-public class ChecarconfirmacaoAgendamento implements Comando {
+public class ChecarconfirmacaoAgendamento implements ComandoConfirmarAgendamento {
     private Proprietario proprietario;
     private Agendamento agendamento;
 
@@ -12,7 +13,7 @@ public class ChecarconfirmacaoAgendamento implements Comando {
 
     @Override
     public void executar() {
-        agendamento.checarConfirmacaoProprietario(agendamento);
+        agendamento.ChecarConfirmacaoAgendamento(agendamento);
         proprietario.confirmarAgendamento();
     }
 }
